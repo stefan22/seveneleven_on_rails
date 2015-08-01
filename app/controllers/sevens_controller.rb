@@ -3,5 +3,9 @@ class SevensController < ApplicationController
     @sevens = Seven.all
   end
 
+  def new
+
+  end
+
 
 end
