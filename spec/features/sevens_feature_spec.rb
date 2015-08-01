@@ -22,6 +22,17 @@ feature 'sevens locations' do
     end
   end
 
+  context 'creating seven elevens' do
+    scenario 'prompts user to fill out form then displays a new seven eleven' do
+        visit '/sevens'
+        click_link 'Add a Seven'
+        fill_in 'Name', with: 'Reseda'
+        click_button 'Create Seven'
+        expect(page).to have_content 'Reseda'
+        expect(current_path).to eq '/sevens'
+    end
+  end
+
 
 
 
