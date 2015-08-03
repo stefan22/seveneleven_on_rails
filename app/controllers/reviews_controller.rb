@@ -8,6 +8,7 @@ class ReviewsController < ApplicationController
   def create
     @seven = Seven.find(params[:seven_id])
     @seven.reviews.create(review_params)
+    redirect_to sevens_path
   end
 
   def review_params
