@@ -10,4 +10,10 @@ describe Seven, type: :model do
     expect(seven).not_to be_valid
   end
 
+  it 'is not valid unless it has a unique name' do
+      Seven.create(name:'Reseda')
+      seven = Seven.new(name:'Reseda')
+      expect(seven).to have(1).error_on(:name)
+  end
+
 end
