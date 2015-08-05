@@ -68,6 +68,15 @@ feature 'sevens locations' do
     end
   end
 
+  context 'an invalid seven' do
+    it 'does not let you submit a name that is too short' do
+      visit '/sevens'
+      click_link 'Add a Seven'
+      fill_in 'Name', with: 'Re'
+      expect(page).not_to have_content 'h2', text: 'Re'
+      expect(page).to have_content 'error'
+    end
+  end
 
 
 
