@@ -8,8 +8,13 @@ class SevensController < ApplicationController
   end
 
   def create
-    @seven = Seven.create(seven_params)
-    redirect_to '/sevens'
+    @seven = Seven.new(seven_params)
+    if @seven.save
+      redirect_to sevens_path
+    else
+      render 'new'
+    end
+    
   end
 
   def seven_params
