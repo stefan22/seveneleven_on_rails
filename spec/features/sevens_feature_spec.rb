@@ -73,6 +73,7 @@ feature 'sevens locations' do
       visit '/sevens'
       click_link 'Add a Seven'
       fill_in 'Name', with: 'Re'
+      click_button 'Create Seven'
       expect(page).not_to have_content 'h2', text: 'Re'
       expect(page).to have_content 'error'
     end
