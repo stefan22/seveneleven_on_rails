@@ -50,4 +50,6 @@ group :development, :test do
 
   gem 'rspec-collection_matchers'
 
+  gem 'devise'
+
 end
