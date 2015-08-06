@@ -19,8 +19,8 @@ feature 'user can sign in and out' do
       visit '/'
       click_link 'Sign up'
       fill_in 'Email', with: 'test@test.com'
-      fill_in 'Password', with: 'pass'
-      fill_in 'Password confirmation', with: 'pass'
+      fill_in 'Password', with: 'passpass'
+      fill_in 'Password confirmation', with: 'passpass'
       click_button 'Sign up'
     end
 
